@@ -7,5 +7,6 @@ module.export = {
     "es2021": false,
     "node": true,
     "jest": true,
+    "es6": true
 },
 }
