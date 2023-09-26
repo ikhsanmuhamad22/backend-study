@@ -1,11 +1,12 @@
-class UserRepository {
-  async addUser(registerUser) {
-    throw new Error('USER_REPOSITORY.METHOD_NOT_IMPLEMENTED');
-  }
+const container = require('./Infrastuctures/container');
+const createServer = require('./Infrastuctures/http/createServer');
 
-  async verifyAvailableUsername(username) {
-    throw new Error('USER_REPOSITORY.METHOD_NOT_IMPLEMENTED');
-  }
-}
+require('dotenv').config();
 
-module.exports = UserRepository;
+const start = async () => {
+  const server = await createServer(container);
+  await server.start();
+  console.log(`server start at ${server.info.uri}`);
+};
+
+start();
