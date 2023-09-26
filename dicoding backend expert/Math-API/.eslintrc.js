@@ -3,10 +3,9 @@ module.export = {
       "ecmaVersion": "latest"
   },
   "env": {
+    "es6": true,
     "commonjs": true,
-    "es2021": false,
     "node": true,
     "jest": true,
-    "es6": true
 },
 }
